@@ -71,3 +71,43 @@
 \
 \
 }
+
+
+Jenkins installation procedure:::::::::———
+
+https://www.serverkaka.com/2018/08/enable-password-authentication-aws-ec2-instance.html
+Jenkins.io
+
+chmod 700 ~/Downloads/us-east-2console.pem
+
+ssh -i ~/Downloads/us-east-2console.pem ec2-user@52.15.155.252
+
+java -version
+
+yum install java-1.8.0-openjdk.x86_64
+
+
+
+ls /etc/yum.repos.d/
+
+Yum  install Jenkins
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+ls /etc/yum.repos.d/
+
+yum install jenkins
+
+* sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+*  yum install jenkins
+rpm -qa jenkins-jenkins-2.277.1-1.1.noarch 
+
+
+service jenkins start
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+
+sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
