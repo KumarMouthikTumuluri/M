@@ -1,0 +1,27 @@
+Prerequisites for Ansible Engine/control Node:
+RHEL/Centos /Debian/Ubuntu Linux with python 2(2.7) or python 3 (3.5 installed)
+windows is not supported for control node
+
+Note:Ansible version 2.4 and later can manage earlier operating systems that contain Python 2.6 or python
+
+we can install ansible in 3 ways
+ using yum 
+ using pip
+ using compile file
+ 
+ open https://docs.ansible.com
+ 
+ centos 
+ cat /etc/redhat-release
+ python --version
+ yum install ansible
+ 
+  rpm packages for EPEL
+  
+  
+  yum install https://dl.fedoraproject.org/pub/epel-release-latest-7.noarch.rpm
+yum install ansible
+ansible --version
+cd /etc/ansible/
+ls -lrt
+ansible history
