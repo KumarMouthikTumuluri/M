@@ -1,3 +1,16 @@
+>it is a free open source Automation tooland simple, very powerful-configuration management , application development ,task automationalso it orchastrian
+>uses Existing open SSh
+>Agent -less -No Need to install any agent on ansible client/nodes
+>Python /yaml based 
+>highly flexible and configuration management of systems 
+>large number of ready to use modules 
+>custom modules can be added if needed
+
+
+
+
+
+installation ansible /controller /Master
 Prerequisites for Ansible Engine/control Node:
 RHEL/Centos /Debian/Ubuntu Linux with python 2(2.7) or python 3 (3.5 installed)
 windows is not supported for control node
@@ -25,3 +38,53 @@ ansible --version
 cd /etc/ansible/
 ls -lrt
 ansible history
+
+
+Steps to configure ansible
+launch / select required no of servers. which are called Managed Nodes/clients
+Required for Managed Nodes/Clients:
+  >we require python 2(version 2.6 or later) or python (3.5or later)
+  Note :we can also work without python on managed Nodes that is usung raw modules
+ ansible uses ssh connection to connect  and work with Managed nodes 
+ 
+ we create ssh connection in two ways
+  pawssword authentication
+  password less authentication (that is with ssh keys)
+  provide or manage nodes ip/fqdn in inventory file n ansible engine
+  simply test configuration by runnning :ansible all -m ping
+  
+  
+  >>>>password less authentication
+  :create same user (ansadmin)across all servers and provide password for all users
+  useradd ansadmin
+  passwd ansadmin
+  ---new passwd :ansadmin@123
+  same done for all users
+ >>> provide root priviliges to all ansadmin users on all users
+  visudo
+  ansadmin ALL=(ALL) NOPASSWORD:ALL
+  vi /etc/ssh/sshd_config-password authentication - yes(Make sure your password authentication is yes all servers under /etc/ssh/sshd_config file)
+  service sshd restart /systemctl restart sshd
+ sudo su ansadmin
+ cd 
+ ls -a
+ ssh-keygen
+ =3 times+enter 
+ ls -al
+  cd .ssh/
+  ls -lrt
+  generate ssh-keys using ssh-keygen command from ansadmin 
+  copy ssh public key using ssh-copy-id <hostname> from /home/ansadmin/.ssh/ location- ssh-copy-id 3.143.248.186 then yes then type ssh 3.143.248.186 you can able to login to that server agent 
+  now login to your remote server without providing password with the following commmand
+   >sshuser_name@hostname-ssh ansadmin@3.143.248.186
+   update invertory file with ips
+   cd /etc/ansible/
+   ls
+    vi hosts-paste ips
+    ansible all -m ping
+    
+    
+   
+   
+  
+  
