@@ -1,1 +1,34 @@
+what is infrastructure?
+resources to run any application
+
+infrastructure is composed of physical virtual resources that support the flow , storage , processing and analysis of data
+
+Provisioning infracstucture using script /tools instead of manually configuring machines
+simple words
+ provisioning means
+  >creating
+  >updating
+  >deleting
+IAC is about writing a program in a high level language
+it allows you to automate he process of provisioning infrastrcuture
+it allows to maintain the version history of infrastructure
+
+
+
+IAC tools
+:-
+
+Terraform-automate anyone of the cloud below including vm ware
+
+Aws Cloud Formation- provision is restricted to aws
+
+Azure Resource Manager-provision is restricted to azure
+google cloud deployment Manager-provision is restricted to google
+
+Terraform is a infrastructure as a cloud software by hashicorp
+terraform enables you to create change improve and versioning
+infrastructure safely and efficiently
+ terraform is a first multicloud nfrastructure as a code and it is written in go language
+ terraform can create infrastructure (creating resources) across all major infrastructure provides such as AWS GCP openstack VMware IBM and more
+ 
 
