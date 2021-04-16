@@ -84,6 +84,10 @@ Required for Managed Nodes/Clients:
     ansible all -m ping
     
     
+    the ansible inventory file defines the list of hosts upon which the ansible works
+    
+    
+    
    
    
   
