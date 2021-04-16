@@ -1,0 +1,59 @@
+ansible commands with modules 
+
+Ansible commands re used to manage the entire infrastructure /client/nodes  from ansible master/ansible  admin client 
+
+Ansible command uses “ modules” to accomplish mode of its tasks 
+
+These modules can do anything like install software, copy files , create users etc
+
+So based on the task there are different types of users 
+
+The basic syntax of ensile commands are
+             ansible  <group name> -m <module> -a <arguments>
+
+>points to remember :
+     Inplace of group_name we can use (from inventory file)
+            Any group name 
+             Single host name 
+           Multiple host name separated by :
+           Multiple groups separated by :
+           Multiple hosts and groups separated by :
+              all keyword to represent ll group and host names
+   Arguments are optional. 
+
+
+Let me explain  its ping module 
+
+It is used to check the connectivity
+
+
+
+
+To transfer a file required module is 
+ 
+
+Copy 
+
+
+Syntax:
+
+  ansible  <grp name> -m copy -a “src=/xxx/xxx/xxxx.  dest=/tmp”
+
+
+The ansible command module is used for executing commands in remote servers 
+E can pass commands as arguments in a command module 
+Command module doesnt process our commands through shell like bash , sh ,csh etc
+ We can pass any argument o this command module to execute 
+
+Basic syntax is 
+————ansible <grp name> -m command -a “ required command”
+
+
+……….. echo “ we are using command module in this tutorial” >>command_copy.txt
+
+required command:—— 
+  hostname
+  uptime 
+  Date 
+ W 
+ Cat echo
