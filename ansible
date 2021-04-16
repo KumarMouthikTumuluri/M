@@ -84,7 +84,53 @@ Required for Managed Nodes/Clients:
     ansible all -m ping
     
     
+    
+    mkdir my_ansible_prod
+    
+    mkdir my_ansible_nonprod-> cp -r /etc/ansible/*  host key checking is equal to false in ansible.cfg for disabling host key checking 
+    inventory file with groups
     the ansible inventory file defines the list of hosts upon which the ansible works
+    
+    cd 
+    
+    ls (non prod)
+    cat ansible.cfg | grep  -i invetory -inventory =./hosts
+    
+    
+    tree /etc/ansible/
+    
+    
+    vi hosts
+    cd 
+    cd .ssh/
+    ls
+    rm -rf authorised_keys
+    
+    ssh-copy-id localhost
+    
+    ssh localhost
+     
+     got to ./hosts
+     add localhost
+     
+     divede all your hosts to groups then do >>>>>ansible groupname -m ping
+     
+     we can create group of groups also like
+     [db:children]
+     [db_oracle]
+     [db_mysql]
+     
+     
+     The default Location is : /etc/ansible/ansible.cfg in which we can make various settings like
+     but we can define ansible configuration file in different location from there there is the priority of the file
+     
+     Location with priority (from top to bottom):
+       >ANSIBLE_CONFIG environment variable
+       >./ansible.cfg environment variable 
+       > ~/.ansible.cfg from the current directory
+       > /etc/ansible/ansible.cfg default ansible.cfg file
+     
+    
     
     
     
